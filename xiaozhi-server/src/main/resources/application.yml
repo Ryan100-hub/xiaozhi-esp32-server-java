@@ -46,7 +46,7 @@ spring:
 
   # Flyway 数据库版本管理
   flyway:
-    enabled: true
+    enabled: false
     locations: classpath:db/migration
     baseline-on-migrate: true
     baseline-version: 0
@@ -56,9 +56,10 @@ spring:
   data:
     redis:
       # Redis 服务器地址（Spring Data Redis 和 Redisson 自动共享此配置）
-      host: localhost
+      host: 124.222.26.8
       port: 6379
-      database: 0
+      database: 1
+      password: 2026@Qwer
       # Lettuce 连接池配置（默认不开池，所有线程共享单连接，高并发下会成为瓶颈）
       lettuce:
         pool:

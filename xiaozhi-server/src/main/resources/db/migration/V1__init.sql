@@ -4,10 +4,10 @@ SET CHARACTER SET utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- 创建本地用户并设置密码（使用mysql_native_password插件）
-CREATE USER IF NOT EXISTS 'xiaozhi'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456';
+CREATE USER IF NOT EXISTS 'xiaozhi'@'localhost' IDENTIFIED WITH mysql_native_password BY '2026@XiaoZhi';
 
 -- 创建远程用户并设置密码（使用mysql_native_password插件）
-CREATE USER IF NOT EXISTS 'xiaozhi'@'%' IDENTIFIED WITH mysql_native_password BY '123456';
+CREATE USER IF NOT EXISTS 'xiaozhi'@'%' IDENTIFIED WITH mysql_native_password BY '2026@XiaoZhi';
 
 -- 仅授予本地用户对 xiaozhi 数据库的所有权限
 GRANT ALL PRIVILEGES ON xiaozhi.* TO 'xiaozhi'@'localhost';
@@ -488,7 +488,7 @@ SELECT 1, permissionId FROM `xiaozhi`.`sys_permission`;
 
 -- 普通用户角色权限（只有部分权限）
 INSERT INTO `xiaozhi`.`sys_auth_role_permission` (`authRoleId`, `permissionId`)
-SELECT 2, permissionId FROM `xiaozhi`.`sys_permission` WHERE 
+SELECT 2, permissionId FROM `xiaozhi`.`sys_permission` WHERE
 permissionKey IN (
     'system:setting',
     'system:setting:account',
