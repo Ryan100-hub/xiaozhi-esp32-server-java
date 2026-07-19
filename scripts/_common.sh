@@ -88,7 +88,8 @@ detect_platform() {
             SHERPA_JNI_LIB="sherpa-onnx-jni.${LIB_EXT}"
             SHERPA_CAPI_LIB="sherpa-onnx-c-api.${LIB_EXT}"
             ONNXRT_LIB="onnxruntime.${LIB_EXT}"
-            VOSK_LIB="vosk.${LIB_EXT}"
+            VOSK_LIB="libvosk.${LIB_EXT}"
+            #    原来的代码：  VOSK_LIB="vosk.${LIB_EXT}"
             ;;
     esac
 }

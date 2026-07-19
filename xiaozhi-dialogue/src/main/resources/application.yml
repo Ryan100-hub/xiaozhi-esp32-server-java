@@ -32,9 +32,10 @@ spring:
 
   data:
     redis:
-      host: localhost
+      host:  124.222.26.8
       port: 6379
-      database: 0
+      database: 1
+      password: 2026@Qwer
       lettuce:
         pool:
           max-active: 16

@@ -3,19 +3,16 @@ package com.xiaozhi.dialogue.audio.vad;
 import ai.onnxruntime.OnnxTensor;
 import ai.onnxruntime.OrtEnvironment;
 import ai.onnxruntime.OrtException;
-import ai.onnxruntime.OrtSession;
 import ai.onnxruntime.OrtLoggingLevel;
+import ai.onnxruntime.OrtSession;
+import com.xiaozhi.utils.AudioUtils;
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import com.xiaozhi.utils.AudioUtils;
-
-
-import jakarta.annotation.PostConstruct;
-import jakarta.annotation.PreDestroy;
 import java.util.Map;
-
-import lombok.extern.slf4j.Slf4j;
 /**
  * Silero VAD模型实现
  */
