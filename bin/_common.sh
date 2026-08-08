@@ -76,6 +76,7 @@ start_service() {
 
   nohup java \
     -Djava.library.path="$ROOT_DIR/lib" \
+    -Donnxruntime.native.onnxruntime.skip=true \
     -jar "$jar" \
     > /dev/null 2>&1 &
 

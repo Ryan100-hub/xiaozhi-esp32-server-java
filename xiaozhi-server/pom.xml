@@ -88,7 +88,7 @@
                 <configuration>
                     <!-- 工作目录设为项目根，保证 models/ lib/ 等相对路径正确 -->
                     <workingDirectory>${project.parent.basedir}</workingDirectory>
-                    <jvmArguments>-Djava.library.path=${project.parent.basedir}/lib</jvmArguments>
+                    <jvmArguments>-Djava.library.path=${project.parent.basedir}/lib -Donnxruntime.native.onnxruntime.skip=true</jvmArguments>
                 </configuration>
             </plugin>
             <plugin>
@@ -96,7 +96,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
                 <configuration>
-                    <argLine>-Djava.library.path=${project.parent.basedir}/lib</argLine>
+                    <argLine>-Djava.library.path=${project.parent.basedir}/lib -Donnxruntime.native.onnxruntime.skip=true</argLine>
                 </configuration>
             </plugin>
         </plugins>
